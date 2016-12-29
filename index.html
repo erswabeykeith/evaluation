@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Evaluation</title>
+  <script src="angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <main ng-app="PeopleSelectorApp" ng-controller="PeopleSelectorController as peopleselector">
+    <section class = "container">
+      <h1>People Selector</h1>
+      <div ng-repeat="person in peopleselector.people">
+        <button ng-click="peopleselector.submitPerson(person)" id="{{person.name}}">{{person.name}}</button>
+        <p>{{person.name}} was born in {{person.birthplace}} and is {{person.age}} years old.
+      </div>
+    </section>
+  </main>
+</body>
+<html>
